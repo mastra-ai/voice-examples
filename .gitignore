@@ -2,3 +2,5 @@
 memory.db
 memory.db-*
 .next
+
+node_modules/
