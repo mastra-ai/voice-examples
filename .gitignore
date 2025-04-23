@@ -4,3 +4,5 @@ memory.db-*
 .next
 
 node_modules/
+.env
+1.sock
