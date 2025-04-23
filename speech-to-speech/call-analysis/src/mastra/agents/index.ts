@@ -4,15 +4,11 @@ import { createTool } from '@mastra/core/tools';
 import { OpenAIRealtimeVoice } from '@mastra/voice-openai-realtime';
 import { z } from 'zod';
 
-const voice = new OpenAIRealtimeVoice({
-    debug: true,
-});
-
 // Have the agent do something
 export const speechToSpeechServer = new Agent({
     name: 'mastra',
     instructions: 'You are a helpful assistant.',
-    voice: voice,
+    voice: new OpenAIRealtimeVoice(),
     model: openai('gpt-4o'),
     tools: {
         salutationTool: createTool({
